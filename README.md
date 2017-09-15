@@ -105,3 +105,11 @@ and the attributes from one single parent device.
     SUBSYSTEMS==""
     DRIVERS==""
 ```
+## kernel build (barcelona-4.3.3)
+
+```
+sudo apt-get install build-essential linux-source kernel-package libncurses5-dev fakeroot
+cd barcelona-4.3.3
+make -j16
+make-kpkg --rootcmd=fakeroot --initrd --jobs=8 --append-to-version=.001 --revision=001 kernel_image kernel_headers
+```
