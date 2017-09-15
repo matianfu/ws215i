@@ -115,7 +115,9 @@ make-kpkg --rootcmd=fakeroot --initrd --jobs=8 --append-to-version=.001 --revisi
 ```
 ## post install
 
+```
 . /lib/chroot-setup.sh
 chroot_setup
 chroot /target /overlay/post_install
 chroot_cleanup
+```
