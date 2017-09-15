@@ -113,3 +113,9 @@ cd barcelona-4.3.3
 make -j16
 make-kpkg --rootcmd=fakeroot --initrd --jobs=8 --append-to-version=.001 --revision=001 kernel_image kernel_headers
 ```
+## post install
+
+. /lib/chroot-setup.sh
+chroot_setup
+chroot /target /overlay/post_install
+chroot_cleanup
